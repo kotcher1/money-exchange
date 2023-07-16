@@ -1,24 +1,24 @@
-## Money Exchange
+## Обмен денег
 
-### Description
+### Задача
 
-Write a method makeExchange that will determine the minimum number of coins needed to make change for a given amount in American currency.
-Coins used will be half-dollars, quarters, dimes, nickels, and pennies, worth 50¢, 25¢, 10¢, 5¢ and 1¢, respectively.
-They'll be represented by the strings H, Q, D, N and P.
+Написать метод makeExchange, определяющий минимальное количество монет, необходимое для внесения сдачи на заданную сумму в американской валюте.
+Используемые монеты - полдоллара, четвертак, десятицентовик, пятицентовик и пенни номиналом 50 центов, 25 центов, 10 центов, 5 центов и 1 цент соответственно.
+Они будут представлены строками H, Q, D, N и P.
 
-The argument passed in will be an integer representing the value in cents.
-The return value should be an object with the symbols as keys, and the numbers of coins as values.
-Coins that are not used should not be included in the object.
+Переданный аргумент будет целым числом, представляющим значение в центах.
+Возвращаемое значение должно быть объектом с символами в качестве ключей и количеством монет в качестве значений.
+Монеты, которые не используются, не должны быть включены в объект.
 
-### IMPORTANT NOTES
+### Важно
 
-If the argument passed in is 0 or less, then the method should return an empty object.
-If the currency that you would like to exchange more than 10000 please return next object:
+Если переданный аргумент равен 0 или меньше, то метод должен возвращать пустой объект.
+Если валюта, которую вы хотите обменять, превышает 10000, пожалуйста, верните следующий объект:
 ```javascript
    {error: "You are rich, my friend! We don't have so much coins for exchange"}
 ```
 
-### For example:
+### Пример
 ```javascript
   makeExchange(0)  --> {}
   makeExchange(1)  --> {"P":1}
@@ -26,15 +26,9 @@ If the currency that you would like to exchange more than 10000 please return ne
   makeExchange(91) --> {"H":1,"Q":1,"D":1,"N":1,"P":1}
   makeExchange(9999999)  --> {error: "You are rich, my friend! We don't have so much coins for exchange"}
 ```
-![Money Exchange](./images/money-exchange.jpg)
 
-## Prepare and test
+## Как тестировать
 
-- Install [Node.js](https://nodejs.org/en/)
-- Clone this repository: `git clone https://github.com/SergeyKovalchuk/Money-Exchange.git`
-- Run `npm install` in command line
-- Run `npm test` in command line
-- You will see the number of passing and failing tests
-
-#### Write your code in `src/index.js`
-#### Run test locally `npm test`
+- Запустить `npm install` в терминале
+- Запустить `npm test` в терминале
+- Вы сможете увидеть количество пройденных и провалившихся тестов
